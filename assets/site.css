@@ -540,3 +540,46 @@ picture { display: block; flex: none; }
 
 /* Contact aside link */
 .pagehead .aside a { color: inherit; }
+
+/* Round 2 (Nov 2026): portrait and square photos, three photo cards on Student organizations */
+.photo-portrait { max-width: 24rem; }
+.photo-portrait img { aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; }
+.photo-scholarship { max-width: 42rem; }
+.photo-scholarship img { aspect-ratio: 3 / 2; object-fit: cover; object-position: center 40%; }
+.photo-cards.photo-cards-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 960px) { .photo-cards.photo-cards-3 { grid-template-columns: 1fr; } .photo-cards-3 .card.photo-card { min-height: 12rem; } }
+@media (max-width: 560px) { .steps.steps-icons[style] { grid-template-columns: 1fr !important; } }
+/* Round 2 (Nov 2026): the full 2027 cohort application */
+.app-form .app-intro { font-size: 1.05rem; border-left: 3px solid var(--gold); padding-left: 1.2rem; margin-bottom: 2rem; }
+.app-form .app-intro p { margin: 0 0 .8rem; }
+.req { color: #8a2a22; font-weight: 600; }
+.opt { font-family: var(--sans); font-size: .72rem; font-weight: 400; color: var(--ink-soft); margin-left: .3rem; }
+.req-note { font-family: var(--sans); font-size: .8rem; color: var(--ink-soft); }
+.app-section { border-top: 2px solid var(--navy) !important; padding-top: 1.6rem !important; }
+.app-section > legend { float: left; width: 100%; margin-bottom: 1.4rem; }
+.app-section > legend + * { clear: both; }
+.sec-desc { font-family: var(--sans); font-size: .9rem; color: var(--ink-soft); margin-top: 0; }
+fieldset.group { border: 0; padding: 0; margin: 0 0 1.6rem; min-width: 0; }
+fieldset.group > legend { float: left; width: 100%; margin-bottom: .55rem; }
+fieldset.group > legend + * { clear: both; }
+fieldset.group[aria-invalid="true"] .choice, fieldset.group[aria-invalid="true"] .avail { border-color: #8a2a22; }
+.choices.cols-2 { grid-template-columns: 1fr 1fr; }
+.choice-other span { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .8rem; }
+.choice-other .other-text { flex: 1 1 10rem; font-size: 1rem; padding: .45rem .6rem; }
+input[type="tel"], input[type="file"] { width: 100%; font: inherit; font-size: 1.05rem; color: var(--ink); background: var(--white); border: 1px solid #aeb2b8; border-radius: 0; padding: .7rem .8rem; }
+input[type="tel"]:focus, input[type="file"]:focus { outline: 2px solid var(--navy); outline-offset: 0; border-color: var(--navy); }
+input[type="tel"][aria-invalid="true"], input[type="file"][aria-invalid="true"] { border-color: #8a2a22; background: #f7ebe7; }
+.grid-scroll { overflow-x: auto; }
+.avail { border-collapse: collapse; width: 100%; min-width: 22rem; background: var(--white); border: 1px solid #aeb2b8; font-family: var(--sans); font-size: .85rem; }
+.avail th, .avail td { border: 1px solid var(--rule); padding: .55rem .3rem; text-align: center; }
+.avail th[scope="row"] { text-align: left; padding-left: .7rem; font-weight: 600; }
+.avail input { width: 1.15rem; height: 1.15rem; accent-color: var(--navy); margin: 0; }
+.app-info { background: var(--white); border: 1px solid var(--rule); border-top: 3px solid var(--navy); padding: 1.3rem 1.4rem; margin: 0 0 1.6rem; font-size: .98rem; max-height: 26rem; overflow-y: auto; }
+.app-info h3 { font-size: 1.2rem; color: var(--navy); margin: 0 0 .8rem; }
+.app-info p { margin: 0 0 .8rem; }
+.app-confirm { border-left: 3px solid var(--gold); background: var(--paper-deep); padding: 1.5rem 1.6rem; }
+.app-confirm[hidden], .app-form [hidden] { display: none !important; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.btn[disabled] { opacity: .6; cursor: progress; }
+@media (max-width: 800px) { .choices.cols-2 { grid-template-columns: 1fr; } }
