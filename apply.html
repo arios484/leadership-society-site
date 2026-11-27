@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply | The Leadership Society</title>
+<meta name="description" content="Apply to the Leadership Society. Applications for the 2027 cohort close Monday, December 28, 2026, at 11:59 PM CST.">
+<meta name="theme-color" content="#fbf9f4">
+<meta property="og:title" content="Apply | The Leadership Society">
+<meta property="og:description" content="Apply to the Leadership Society. Applications for the 2027 cohort close Monday, December 28, 2026, at 11:59 PM CST.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.leadershipsocietyamerica.org/assets/img/seal-512.png">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jost-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="utility"><div class="wrap"><span><b>Applications for the 2027 cohort are open through December 28.</b></span><span class="u-right"><a href="/trainings#questions">Questions</a><a href="mailto:info@leadershipsocietyamerica.org">info@leadershipsocietyamerica.org</a></span></div></div>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="The Leadership Society, home">
+      <picture><source type="image/webp" srcset="/assets/img/seal-128.webp 1x, /assets/img/seal-256.webp 2x"><img src="/assets/img/seal-128.png" alt="" width="64" height="64" decoding="async"></picture>
+      <span class="brand-name"><b>The Leadership Society</b><small>Elite training for the next generation</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg class="mt-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><path class="mt-a" d="M4 7h16"/><path class="mt-b" d="M4 12h16"/><path class="mt-c" d="M4 17h16"/></svg><span class="mt-label">Menu</span></button>
+    <nav class="nav" id="site-nav" aria-label="Main"><ul><li><a href="/">Home</a></li><li><a href="/trainings">Curriculum</a></li><li><a href="/scholarships">Scholarships</a></li><li><a href="/internships">Internships &amp; careers</a></li><li><a href="/organizations">Student organizations</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/apply" class="nav-apply" aria-current="page">Apply</a></li></ul></nav>
+  </div>
+</header>
+<main id="main">
+<section class="pagehead">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>Apply</nav>
+    <div class="grid">
+      <div class="ph-main"><h1 class="display">Apply to the Society.</h1></div>
+      <div class="aside"><p>Tell us who you are and what you want to lead. Applications for the 2027 cohort close Monday, December 28, 2026, at 11:59 PM CST.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="form-wrap">
+  <div class="wrap grid">
+    <aside class="form-side">
+      <div class="box">
+        <span class="label">What happens next</span>
+        <p style="margin-top:1rem">Our team reviews each application and contacts applicants for an interview, online or in person.</p>
+        <p>Students at any college or university may apply.</p>
+        <p class="small">Questions about the application: <a href="mailto:recruitment@leadershipsocietyamerica.org">recruitment@leadershipsocietyamerica.org</a></p>
+      </div>
+    </aside>
+    <div class="form-main">
+      <!-- TODO(application backend): this placeholder form does not submit anywhere. The native 45-question application and its delivery backend are a separate work stream; mount it here (keep id="join-form" or update site.js). Hidden utm_source is filled by site.js. -->
+      <form id="join-form" action="#" method="post" data-endpoint="" novalidate>
+        <input type="hidden" name="utm_source" id="utm_source" value="Direct">
+        <fieldset>
+          <legend class="label">About you</legend>
+          <div class="field"><label for="name">Full name</label><input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-err"><span class="error" id="name-err" aria-live="polite"></span></div>
+          <div class="field"><label for="email">Email <span class="hint">Your college email is preferred.</span></label><input type="email" id="email" name="email" autocomplete="email" inputmode="email" required aria-describedby="email-err"><span class="error" id="email-err" aria-live="polite"></span></div>
+          <div class="field-row">
+            <div class="field"><label for="role">I am</label><select id="role" name="role" required aria-describedby="role-err"><option value="">Select</option><option>A college student</option><option>A graduate student</option><option>An educator or adviser</option><option>Other</option></select><span class="error" id="role-err" aria-live="polite"></span></div>
+            <div class="field"><label for="college">College or university <span class="hint">Optional</span></label><input type="text" id="college" name="college" autocomplete="organization"></div>
+          </div>
+        </fieldset>
+        <fieldset aria-describedby="goal-err">
+          <legend class="label">I want to&hellip; <span class="hint" style="display:inline;text-transform:none;letter-spacing:0">Pick any</span></legend>
+          <div class="chk"><label class="choice"><input type="checkbox" name="goal" value="training"><span>Learn the fundamentals</span></label><label class="choice"><input type="checkbox" name="goal" value="advocacy"><span>Advocacy and outreach</span></label><label class="choice"><input type="checkbox" name="goal" value="network"><span>Build my network</span></label><label class="choice"><input type="checkbox" name="goal" value="internship"><span>Find an internship</span></label><label class="choice"><input type="checkbox" name="goal" value="scholarship"><span>Be considered for scholarships</span></label><label class="choice"><input type="checkbox" name="goal" value="organization"><span>Lead a student organization</span></label></div>
+          <span class="error" id="goal-err" aria-live="polite"></span>
+        </fieldset>
+        <fieldset>
+          <legend class="label">Session of most interest <span class="hint" style="display:inline;text-transform:none;letter-spacing:0">Optional</span></legend>
+          <div class="field"><label for="training">Session</label><select id="training" name="training"><option value="">No preference</option><option value="speaking">Speaking to a room</option><option value="meetings">Running a meeting</option><option value="peers">Leading your peers</option><option value="student-org">Leading a student organization</option><option value="coalitions">Bringing people together</option><option value="advocacy">Advocating on campus</option><option value="sales">Sales and marketing</option><option value="internship">Starting an internship</option><option value="resume">R&eacute;sum&eacute;s and interviews</option></select></div>
+        </fieldset>
+        <div class="form-actions">
+          <button class="btn btn-gold" type="submit">Submit application</button>
+          
+        </div>
+        <div class="form-status" id="form-status" role="status" hidden></div>
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div class="f-brand">
+        <picture><source type="image/webp" srcset="/assets/img/seal-128.webp 1x, /assets/img/seal-256.webp 2x"><img src="/assets/img/seal-128.png" alt="" width="88" height="88" loading="lazy" decoding="async"></picture>
+        <div><p>The Leadership Society</p><span class="small">Elite training for the next generation</span></div>
+      </div>
+      <div class="f-col">
+        <span class="label">Learn</span>
+        <ul><li><a href="/trainings">Curriculum</a></li><li><a href="/organizations">Student organizations</a></li></ul>
+      </div>
+      <div class="f-col">
+        <span class="label">Get ahead</span>
+        <ul><li><a href="/scholarships">Scholarships</a></li><li><a href="/internships">Internships</a></li><li><a href="/internships#career-help">Career help</a></li></ul>
+      </div>
+      <div class="f-col wide">
+        <span class="label">The Society</span>
+        <ul><li><a href="/apply">Apply</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="colophon"><span>&copy; 2026 The Leadership Society</span><span>leadershipsocietyamerica.org</span></div>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
