@@ -1,0 +1,34 @@
+name: Copy site from Viktor preview
+on:
+  push:
+    paths:
+      - .github/workflows/mirror.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download the preview site
+        run: |
+          set -e
+          BASE=https://preview-leadership-society-connect-sms.viktor.space
+          wget -e robots=off --mirror --page-requisites --adjust-extension --no-parent -nH --reject-regex '[?]' "$BASE/" || true
+          for p in trainings scholarships internships organizations about contact apply; do
+            [ -f "$p.html" ] || [ -f "$p/index.html" ] || wget -e robots=off -nH --page-requisites --adjust-extension "$BASE/$p" || true
+          done
+          for f in eb-garamond-latin-400-italic eb-garamond-latin-400-normal eb-garamond-latin-500-normal jost-latin-400-normal jost-latin-500-normal jost-latin-600-normal; do
+            [ -f "assets/fonts/$f.woff2" ] || wget -nH -x "$BASE/assets/fonts/$f.woff2" || true
+          done
+          test -f index.html
+          echo '{"cleanUrls": true}' > vercel.json
+          find . -path ./.git -prune -o -type f -print | sort
+      - name: Save the files to the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Copy the Leadership Society site from the Viktor preview"
+          git push
